@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const category = path[2];
 
   if (!count || !category) {
-    showError('❌ Неверный URL. Пример: /5/news/for/business');
+    showError('Неверный /5/news/for/business');
     return;
   }
 
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       html += `</dl>`;
       document.getElementById('content').innerHTML = html;
     })
-    .catch(() => showError('❌ Ошибка загрузки'));
+    .catch(() => showError('Ошибка загрузки'));
 });
 
 function showError(msg) {
